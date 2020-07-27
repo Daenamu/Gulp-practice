@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Daenamu/Gulp-practice/issues"
   },
-  "homepage": "https://github.com/Daenamu/Gulp-practice#readme"
+  "homepage": "https://github.com/Daenamu/Gulp-practice#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
 }
