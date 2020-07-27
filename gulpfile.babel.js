@@ -11,9 +11,9 @@ const routes = {
 }
 
 const pug = () => gulp
-                            .src(routes.pug.src)
-                            .pipe(gpug())
-                            .pipe(gulp.dest(routes.pug.dest));
+                    .src(routes.pug.src)
+                    .pipe(gpug())
+                    .pipe(gulp.dest(routes.pug.dest));
 
 const clean = () => del(["build"])
 
