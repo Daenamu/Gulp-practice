@@ -5,6 +5,7 @@ import ws from "gulp-webserver";
 import image from "gulp-image";
 import sass from "gulp-sass";
 import autop from "gulp-autoprefixer";
+import miniCSS from "gulp-csso";
 
 sass.compiler = require("node-sass");
 
@@ -46,6 +47,7 @@ const styles = () =>
         .pipe(autop({
             cascade: false 
         }))
+        .pipe(miniCSS())
         .pipe(gulp.dest(routes.scss.dest))
 
 const webserver = () => gulp.src("build").pipe(ws({livereload:true, open:true}))
