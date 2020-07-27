@@ -40,7 +40,7 @@ const pug = () =>
         .pipe(gpug())
         .pipe(gulp.dest(routes.pug.dest));
 
-const clean = () => del(["build"])
+const clean = () => del(["build/", ".publish"])
 
 const img = () => 
     gulp
@@ -87,4 +87,4 @@ const postDev = gulp.parallel([webserver, watch])
 
 export const build = gulp.series([prepare, assets])
 export const dev = gulp.series([build, postDev]);
-export const deploy = gulp.series([build, ghdeploy])
+export const deploy = gulp.series([build, ghdeploy, clean])
